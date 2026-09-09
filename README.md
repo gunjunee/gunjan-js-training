@@ -1,1 +1,1 @@
-# gunjan-js-training
+14 Days JavaScript Training Program
