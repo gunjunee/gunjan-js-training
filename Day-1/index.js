@@ -70,25 +70,35 @@ console.log(ending);
 
 
 
-//Type checking puzzle
-let userInput = "120000"
-let str = ""
-let count = 0
-for (let i = userInput.length-1;i>=0; i--){
-    str = userInput[i] + str
-    count++
+//Number-to-indian currency format
+let number = 120000000
+  
+  
+let numberStr = number.toString()
+let parts = numberStr.split('.')
+let newParts = parts[0]
 
-    if (i > 0){
-        if (count === 3){
-            str = "," + str
-        }
 
-         else if (count > 3 &&(count-3)%2 == 0){
-            str = "," + str
-        }
-        
-    }
-    
-    
+let newNumberString = ''
+let i = 0
+
+  
+if (newParts.length > 3) {
+  newNumberString = ',' + newParts.substring(newParts.length - 3) + newNumberString
+  newParts.length -= 3
+  i = 3
 }
+
+  
+while (newParts.length  > 0) {
+  if (newParts.length >= 2) {
+    newNumberString = ',' + newParts.substring(newParts.length - 2, newParts.length) + newNumberString
+    newParts.length -= 2
+    i += 2
+  }
+} 
+
+
+console.log(newNumberString);
+
 
