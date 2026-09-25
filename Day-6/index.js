@@ -33,3 +33,6 @@ function categoryTotal(list, name) {
 }
 
 console.log("Total:", getTotal(expenses), "| GST:", getGst(expenses), "| Materials:", categoryTotal(expenses, "Materials"));
+
+
+//will do before monday 
