@@ -19,15 +19,8 @@ const budgets = {
 
 
 const totalSpent = expenses.reduce((total, expense) => {
-    for (const expense of expenses) {
-        total += expenses.amount
-        console.log( typeof total);
-        
-    }
-});
-console.log(totalSpent);
-
-
+    return total + expense.amount;
+}, 0); 
 
 console.log("Total spent:", totalSpent);
-console.log("Budget remaining:", budgets - totalSpent);
+
